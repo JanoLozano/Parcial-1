@@ -21,7 +21,7 @@
         <java.version>17</java.version>
 
         <sonar.organization>calidadbiblioteca</sonar.organization>
-        <sonar.projectKey>calidadbiblioteca_JanoLozano_Parcial-1</sonar.projectKey>
+        <sonar.projectKey>JanoLozano_Parcial-1</sonar.projectKey>
 
         <sonar.coverage.jacoco.xmlReportPaths>
             ${project.build.directory}/site/jacoco/jacoco.xml
