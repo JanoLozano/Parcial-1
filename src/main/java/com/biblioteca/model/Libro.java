@@ -15,8 +15,6 @@ public class Libro {
 
     private boolean prestado;
 
-    private static final String MENSAJE = "No se puede prestar";
-
     public Libro() {
     }
 
@@ -29,6 +27,14 @@ public class Libro {
     // --- GETTERS ---
 
     public Long getId() {
+        return id;
+    }
+
+    public Long getId2() {
+        return id;
+    }
+
+    public Long getId3() {
         return id;
     }
 
@@ -63,20 +69,21 @@ public class Libro {
     }
 
     public String prestar() {
+
         if (titulo == null) {
-            return MENSAJE;
+            return "No se puede prestar";
         }
 
         if (titulo.isEmpty()) {
-            return MENSAJE;
+            return "No se puede prestar";
         }
 
         if (autor == null) {
-            return MENSAJE;
+            return "No se puede prestar";
         }
 
         if (autor.isEmpty()) {
-            return MENSAJE;
+            return "No se puede prestar";
         }
 
         if (prestado) {
@@ -89,3 +96,4 @@ public class Libro {
     }
 
 }
+
