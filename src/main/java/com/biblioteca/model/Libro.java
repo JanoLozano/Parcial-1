@@ -15,6 +15,8 @@ public class Libro {
 
     private boolean prestado;
 
+    private static final String mensaje = "No se puede prestar";
+
     public Libro() {
     }
 
@@ -69,21 +71,20 @@ public class Libro {
     }
 
     public String prestar() {
-
         if (titulo == null) {
-            return "No se puede prestar";
+            return mensaje;
         }
 
         if (titulo.isEmpty()) {
-            return "No se puede prestar";
+            return mensaje;
         }
 
         if (autor == null) {
-            return "No se puede prestar";
+            return mensaje;
         }
 
         if (autor.isEmpty()) {
-            return "No se puede prestar";
+            return mensaje;
         }
 
         if (prestado) {
