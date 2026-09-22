@@ -62,20 +62,13 @@ public class Libro {
         this.prestado = prestado;
     }
 
+    // Metodo auxiliar para eliminar la duplicación
+    private boolean esTextoInvalido(String texto) {
+        return texto == null || texto.isEmpty();
+    }
+
     public String prestar() {
-        if (titulo == null) {
-            return MENSAJE;
-        }
-
-        if (titulo.isEmpty()) {
-            return MENSAJE;
-        }
-
-        if (autor == null) {
-            return MENSAJE;
-        }
-
-        if (autor.isEmpty()) {
+        if (esTextoInvalido(titulo) || esTextoInvalido(autor)) {
             return MENSAJE;
         }
 
@@ -87,6 +80,5 @@ public class Libro {
 
         return "Libro prestado correctamente";
     }
-
 }
 
