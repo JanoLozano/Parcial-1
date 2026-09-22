@@ -26,7 +26,7 @@ public class Libro {
         this.prestado = false;
     }
 
-    // --- GETTERS Holaa---
+    // --- GETTERS ---
 
     public Long getId() {
         return id;
