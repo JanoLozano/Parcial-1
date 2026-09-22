@@ -26,7 +26,7 @@ public class Libro {
         this.prestado = false;
     }
 
-    // --- GETTERS ---
+    // --- GETTERS Holaa---
 
     public Long getId() {
         return id;
@@ -62,13 +62,20 @@ public class Libro {
         this.prestado = prestado;
     }
 
-    // Metodo auxiliar para eliminar la duplicación
-    private boolean esTextoInvalido(String texto) {
-        return texto == null || texto.isEmpty();
-    }
-
     public String prestar() {
-        if (esTextoInvalido(titulo) || esTextoInvalido(autor)) {
+        if (titulo == null) {
+            return MENSAJE;
+        }
+
+        if (titulo.isEmpty()) {
+            return MENSAJE;
+        }
+
+        if (autor == null) {
+            return MENSAJE;
+        }
+
+        if (autor.isEmpty()) {
             return MENSAJE;
         }
 
@@ -80,5 +87,6 @@ public class Libro {
 
         return "Libro prestado correctamente";
     }
+
 }
 
