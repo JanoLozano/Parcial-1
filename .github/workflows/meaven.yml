@@ -28,3 +28,8 @@ jobs:
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: mvn -B sonar:sonar
+          echo "jacoco.xml encontrado correctamente."
+      - name: SonarQube Cloud analysis
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        run: mvn -B sonar:sonar
